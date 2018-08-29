@@ -2,11 +2,12 @@ public class Static_Method
 {
     void display1()
     {
-        System.out.println("I am not static.\n");
-    }
-
+        //display2(); // It will work, because non static method can call the static method.
+        System.out.println("I am free!!");
+    }   
     static void display2()
     {
-        System.out.println("I am Static.\n");
+        //display1();  // It will not work, because static method can not call non static method
+        System.out.println("I am static.");
     }
 }
