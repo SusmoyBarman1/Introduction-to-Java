@@ -30,16 +30,21 @@ public class Total
         // Read the input and write the output
  
         double total = 0;
+        int count = 0;
         
         while (in.hasNextDouble())
         {
            double value = in.nextDouble();
-           System.out.println(value);
-           out.printf("%15.2f\n", value);
+           double value1 = in.nextDouble();
+           System.out.println(value+"   "+value1);
+           out.printf("\n%8.2f   %8.2f\n", value,value1);
            total = total + value;
+           count = count + 1;
         }
  
-        out.printf("Total: %8.2f\n", total);
+        out.printf("\n Total: %8.2f\n", total);
+        out.printf("\n Average: %8.2f\n",total/count);
+        
  
         in.close();
         out.close();
